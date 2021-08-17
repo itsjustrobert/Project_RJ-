@@ -1,48 +1,51 @@
-// // we need to staore all the accounts in this array
-// let allAccounts = [];
-// // we need to make a class for accounts
-// class Account{
-//     // the account will have a name and a number and a balance
-//     constructor(acctName,acctNum,balance){
-//         this.acctName = acctName;
-//         this.acctNum = acctNum;
-//         this.balance = balance;
-//         // push all instances to the array
-//         allAccounts.push(this);
-//     }
-//     // we need some methods
-//     deposit(){
-        
-//     }
-   
-    
-// }
-// let x = 0
-// if (x > 9){
-// console.log(x)
-// if(x == 21 - 21)
-// {
-//     console.log(x)
-//     if (x <= 1){
-//         console.log(x)
-//     }
-//     if(x == 0){
-//         console.log(x)
-//     }
-// }
-// else{
-//     console.log('the computer is stupid')
-// }}
-// if(x=x){
-// if(){
+// alert("What is today")
 
-// }else if(){
+//let the ues be able to make a account so that they can login in the bank
+// you will have to work with form
 
-// }else{
+// this is where the user will input their name
+let useName = prompt("what is your name");
+var allAccount = []; // we're store all accounts here
 
-// }
-// } else if(){
+class Account {
+  constructor(name, balance) {
+    this.name = useName;
+    this.balance = balance;
+    allAccount.push(this);
+  }
+}
 
-// }else{
+function welcomeBack() {
+  document.write(`Welcome back, ${useName}!!`);
+}
 
-// }
+function UserInformation() {
+  let startingQuestion = prompt("Is this your first time here?").toUpperCase();
+  //  So I can know if the user been here before
+
+  if (startingQuestion === "YES") {
+    let accountMakingDecision = prompt(
+      "Would you like to make a account"
+    ).toUpperCase();
+
+    // asking for a starting balance for new accounts
+    let deposit = prompt("How much are you depositing today");
+
+    //  console.log(deposit);
+    let $deposit = parseInt(deposit);
+
+    //  we just want to know if it's here
+    console.log($deposit);
+
+    let newAcct = new Account(useName, $deposit);
+    console.log(newAcct);
+    console.log(allAccount);
+  } else if (startingQuestion === "NO") {
+    // we need to put what happen if they she no
+    alert("Thanks for return");
+    welcomeBack();
+  }
+}
+UserInformation();
+
+// I think that I need to make something to pass
